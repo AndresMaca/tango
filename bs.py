@@ -11,7 +11,7 @@ lower_bound = 1
 upper_bound = 100000000
 
 while lower_bound <= upper_bound:
-    # Guess using binary search
+    # Guess using binary search > log(n) n: len(upper_bound - lower_bound)
     guess = (lower_bound + upper_bound) // 2
     payload = {'myGuess': guess}
     response = requests.post(url, headers=headers, json=payload).json()
